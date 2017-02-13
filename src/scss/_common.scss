@@ -1,0 +1,58 @@
+html {
+    color: #323232;
+    font-size: 62.5%;
+    font-family: Lucida, "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , serif;
+    line-height: 1;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.GlobalHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: url("images/common/bg_Header.jpg") 50% 50% no-repeat;
+  @include media( sm ) {
+    height: 400px;
+  }
+  @include media( md ) {
+    padding-top: 39px;
+  }
+}
+
+.GlobalFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  text-align: center;
+  background: url("images/common/bg_Footer.jpg") 50% 50% no-repeat;
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  @include media( sm ) {
+    height: 480px;
+  }
+  @include media( lg ) {
+    background-size: cover;
+    font-size: 1.4rem;
+  }
+}
+
+.container {
+  @include container;
+}

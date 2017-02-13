@@ -1,0 +1,130 @@
+.contact {
+  background-color: #fff;
+  .site-content > .container {
+    border: none;
+  }
+}
+
+.containerContact {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: {
+    top: 60px;
+    bottom: 60px;
+  }
+  padding: 0 15px;
+  @include media( sm ) {
+    padding: 20px;
+  }
+  @include media( lg ) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
+.blockPrivacyPolicy {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  span {
+    color: #f77474;
+  }
+  @include media( sm ) {
+    max-width: 570px;
+    font-size: 1.4rem;
+  }
+  @include media( lg ) {
+    padding-right: 40px;
+  }
+}
+
+.Form {
+  max-width: 100%;
+  color: #666;
+  border-radius: 5px;
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: none;
+    font-size: 1.2rem;
+    @include media( sm ) {
+      max-width: 570px;
+      font-size: 1.4rem;
+    }
+  }
+  tr {
+    @include media( sm ) {
+      display: flex;
+      align-items: center;
+      padding: 1em 0;
+      border-bottom: 1px dotted #aaa;
+      &::after {
+        content: "";
+        display: block;
+        padding-top: 1em;
+      }
+    }
+  }
+  th, td {
+    display: block;
+    border: none;
+    background-color: #fff;
+  }
+  th {
+    text-align: left;
+    padding: 1em 0;
+    @include media( sm ) {
+      min-width: 10em;
+    }
+  }
+  .mwform-checkbox-field {
+
+  }
+  .mwform-tel-field {
+    input[type="text"] {
+      max-width: 28%;
+    }
+  }
+  input {
+    height: auto;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: inherit;
+    padding: .7em;
+    border-radius: 5px;
+    &:focus {
+      color: #222;
+    }
+  }
+  textarea {
+    width: 100%;
+    height: 10em;
+  }
+
+  .req {
+    margin-left: .5em;
+    font-size: .8em;
+    color: #f77474;
+  }
+
+  .btnSubmit {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    input[type="submit"] {
+      display: flex;
+      color: #fff;
+      border: none;
+      background-color: #333;
+    }
+  }
+}
