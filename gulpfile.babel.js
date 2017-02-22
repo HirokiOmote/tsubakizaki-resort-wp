@@ -13,7 +13,7 @@ const sources = {
     src: './src',
     sass: './src/scss/**/*.scss',
     js: './src/js/**/*.js',
-    dist: './dist'
+    dist: './dist',
 };
 
 // ___________________________________________________

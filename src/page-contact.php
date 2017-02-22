@@ -2,6 +2,18 @@
     get_header();
 ?>
 
+<script>
+  jQuery(($) => {
+    const getParam = window.location.search.match(/checked=(.*?)(&|$)/);
+    if ( getParam !== null ) {
+      const param = getParam[1];
+      const orgstr = decodeURI(param);
+      const targetFilter = $(".filter[value$='orgstr']");
+      $(`.filter[value$=${orgstr}]`).prop("checked",true);
+    }
+  });
+</script>
+
 <div id="content">
   <div class="containerContact">
     <div class="blockPrivacyPolicy">
